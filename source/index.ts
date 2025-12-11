@@ -28,14 +28,9 @@ class Professor {
 
     alvo.atributos.pv -= danoFinal;
 
-    console.log(
-      `${this.nome} atacou ${alvo.nome} causando ${danoFinal.toFixed(1)} de dano` +
-      (critico ? " (CRÍTICO!)" : "")
-    );
+    console.log(`${this.nome} atacou ${alvo.nome} causando ${danoFinal.toFixed(1)} de dano` + (critico ? " (CRÍTICO!)" : ""));
 
-    if (!alvo.estaVivo()) {
-      console.log(`${alvo.nome} foi derrotado!`);
-    }
+    if (!alvo.estaVivo()) {console.log(`${alvo.nome} foi (DERROTADO!)`);}
   }
 }
 
@@ -52,14 +47,14 @@ function gerarAtributos(): Atributos { // Função para gerar atributos aleatór
   };
 }
 
-const nomes = ["Maykol", "Sekeff", "Iallen", "Jivago", "Mayllon", "Jefferson", "Marcos", "Vasconcelos"];
+const nomes = ["Iallen", "Maykol", "Sekeff", "Jivago", "Mayllon", "Jeferson", "Marcos", "Vasconcelos"];
 
-let professores: Professor[] = nomes.map(n => new Professor(n, gerarAtributos()));
+let professores: Professor[] = nomes.map(nome => new Professor(nome, gerarAtributos()));
 
 console.log("===== RINHA DE PROFESSORES — INÍCIO =====");
 
-while (professores.filter(p => p.estaVivo()).length > 1) { // Loop até restar apenas um
-  const vivos = professores.filter(p => p.estaVivo());
+while (professores.filter(professor => professor.estaVivo()).length > 1) { // Loop até restar apenas um
+  const vivos = professores.filter(professor => professor.estaVivo());
 
   const atacante = vivos[Math.floor(Math.random() * vivos.length)];
   let alvo = vivos[Math.floor(Math.random() * vivos.length)];
