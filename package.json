@@ -1,0 +1,23 @@
+{
+  "name": "battle-of-the-professors-ads-edition",
+  "version": "1.0.0",
+  "description": "Em um reino onde o conhecimento decide batalhas, sete mestres da ADS se enfrentam em uma arena lendária. Cada professor domina habilidades únicas, e apenas um sobreviverá ao caos. Quando as threads colidem e o código vira arma, surge a verdadeira Guerra dos Mestres.",
+  "scripts": {
+    "start": "parcel source/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rikelry/Battle-of-the-Professors-ADS-Edition.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rikelry/Battle-of-the-Professors-ADS-Edition/issues"
+  },
+  "homepage": "https://github.com/Rikelry/Battle-of-the-Professors-ADS-Edition#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3",
+    "typescript": "^5.9.3"
+  }
+}
