@@ -66,6 +66,6 @@ while (professores.filter(professor => professor.estaVivo()).length > 1) { // Lo
   atacante.atacar(alvo);
 }
 
-const vencedor = professores.find(p => p.estaVivo());
+const vencedor = professores.find(professor => professor.estaVivo());
 console.log("===== RINHA DE PROFESSORES — FIM =====");
 console.log(`VENCEDOR: ${vencedor?.nome}!`);
