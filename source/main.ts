@@ -1,12 +1,12 @@
 export interface Atributos {
-  pv: number;
-  mp: number;
-  ataque: number;
-  defesa: number;
-  forca: number;
+  pv:           number;
+  mp:           number;
+  ataque:       number;
+  defesa:       number;
+  forca:        number;
   constituicao: number;
   inteligencia: number;
-  sorte: number;
+  sorte:        number;
 }
 
 export class Professor {
