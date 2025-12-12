@@ -47,15 +47,15 @@ export function gerarAtributos(): Atributos { // Gera atributos aleatórios
   };
 }
 
-export function duelo(a: Professor, b: Professor): Professor {
-  while (a.estaVivo() && b.estaVivo()) {
-    const atacante = Math.random() < 0.5 ? a : b;
-    const alvo = atacante === a ? b : a;
+export function duelo(jogador_um: Professor, jogador_dois: Professor): Professor {
+  while (jogador_um.estaVivo() && jogador_dois.estaVivo()) {
+    const atacante = Math.random() < 0.5 ? jogador_um : jogador_dois;
+    const alvo = atacante === jogador_um ? jogador_dois : jogador_um;
 
     atacante.atacar(alvo);
   }
 
-  return a.estaVivo() ? a : b;
+  return jogador_um.estaVivo() ? jogador_um : jogador_dois;
 }
 
 export function torneio(professores: Professor[]): Professor { // Realiza rounds estilo torneio
