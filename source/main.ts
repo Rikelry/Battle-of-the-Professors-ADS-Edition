@@ -1,12 +1,12 @@
 export interface Atributos {
-  pv:           number;
-  mp:           number;
-  ataque:       number;
-  defesa:       number;
-  forca:        number;
+  pv: number;
+  mp: number;
+  ataque: number;
+  defesa: number;
+  forca: number;
   constituicao: number;
   inteligencia: number;
-  sorte:        number;
+  sorte: number;
 }
 
 export class Professor {
@@ -34,7 +34,7 @@ export class Professor {
   }
 }
 
-export function gerarAtributos(): Atributos { // Gera atributos aleatórios
+export function gerarAtributos(): Atributos {
   return {
     pv: 80 + Math.floor(Math.random() * 40),
     mp: 20 + Math.floor(Math.random() * 20),
